@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | DevPortfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <style>
+        /* Container for the 3D model positioned to the bottom right */
+        .laptop-model-container {
+            position: fixed;
+            right: 2%;
+            top: 72%; /* Adjusted to place it lower, matching your box */
+            transform: translateY(-50%);
+            width: 650px; /* Increased size to make it big */
+            height: 550px;
+            z-index: 10;
+            pointer-events: auto; /* Allows interaction/rotation */
+        }
+        
+        .laptop-model-container model-viewer {
+            width: 100%;
+            height: 100%;
+            --poster-color: transparent;
+        }
+        
+        /* Responsive adjustments to keep it balanced */
+        @media (max-width: 1400px) {
+            .laptop-model-container {
+                width: 500px;
+                height: 450px;
+                right: 1%;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .laptop-model-container {
+                width: 400px;
+                height: 350px;
+                opacity: 0.8;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .laptop-model-container {
+                display: none; /* Hidden on small mobile screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="logo-section">
+                <i class="fa-solid fa-code"></i>
+                <span class="nav-text">Dev<span>Portfolio</span></span>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span class="nav-text">Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="experiences.html">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span class="nav-text">Experience</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="nav-text">About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="skills.html">
+                            <i class="fa-solid fa-gears"></i>
+                            <span class="nav-text">Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="client-testimonials.html">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="nav-text">Testimonials</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="nav-text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+<div class="sidebar-footer">
+                <div class="footer-item">
+                    <a href="https://github.com/Rakesh12277" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                        <span class="nav-text">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <section class="hero-clean">
+            <div class="hero-container">
+                <div class="hero-wrapper">
+                    <p class="intro-badge">WELCOME TO MY PORTFOLIO</p>
+                    <h1 class="main-title">I'm Rakesh <span class="gradient-text">Bohara</span></h1>
+                    <h2 class="sub-title">Senior Full-Stack Web Developer</h2>
+                    
+                    <p class="hero-text">
+                        Specializing in building high-end digital products, interactive 
+                        gaming portals, and scalable web architectures with a focus 
+                        on performance and clean code.
+                    </p>
+
+                    <div class="cta-group">
+                        <a href="projects.html" class="btn-fill">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="contact.html" class="btn-border">Let's Talk</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <span>50+</span>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-box">
+                            <span>3+</span>
+                            <p>Years Exp.</p>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-box">
+                            <span>100%</span>
+                            <p>Success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="bg-image"></div>
+
+    <!-- Corrected the opening tag and camera zoom -->
+    <div class="laptop-model-container">
+        <model-viewer 
+            src="../laptop_asus_rog_zephyrus_g15_-_made_with_blender.glb"
+            alt="3D Laptop Model - ASUS ROG Zephyrus G15"
+            camera-controls
+            auto-rotate
+            camera-orbit="45deg 75deg 1.5m" 
+            field-of-view="30deg"
+            shadow-intensity="1.5"
+            exposure="1"
+            loading="eager">
+        </model-viewer>
+    </div>
+
+</body>
+</html>
